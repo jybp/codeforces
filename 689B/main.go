@@ -5,6 +5,8 @@ import (
 	"io"
 	"math"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main() {
@@ -24,10 +26,12 @@ func run(r io.Reader, w io.Writer) {
 		shortcuts[i].from = i + 1
 		fmt.Fscan(r, &shortcuts[i].to)
 	}
-	for i := 1; i <= n; i++ {
-		fmt.Fprintf(w, "%d ", solve(i, shortcuts))
-	}
 	fmt.Printf("shortcuts: %v\n", shortcuts)
+	answers := []string{}
+	for i := 1; i <= n; i++ {
+		answers = append(answers, strconv.Itoa(solve(i, shortcuts)))
+	}
+	fmt.Fprintf(w, "%s", strings.Join(answers, " "))
 }
 
 func solve(i int, shortcuts []shortcut) int {
