@@ -29,7 +29,6 @@ func run(r io.Reader, w io.Writer) {
 		fmt.Fscan(r, &to)
 		shortcuts[i] = to
 	}
-	fmt.Printf("shortcuts: %v\n", shortcuts)
 
 	// Setup regular routes.
 	nodes := map[int]*node{}
