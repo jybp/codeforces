@@ -12,7 +12,7 @@ func TestRun(t *testing.T) {
 	var b bytes.Buffer
 	run(r, &b)
 
-	expected := `0 1 2`
+	expected := `0 1 2 `
 	actual := b.String()
 	if expected != actual {
 		t.Fatalf("actual:\n%s\nexpected:\n%s", actual, expected)
