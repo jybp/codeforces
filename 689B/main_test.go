@@ -18,12 +18,12 @@ func TestRun(t *testing.T) {
 		},
 		{
 			input: `5
-1 2 3 4 5`,
+		1 2 3 4 5`,
 			output: `0 1 2 3 4`,
 		},
 		{
 			input: `7
-		4 4 4 4 7 7 7`,
+				4 4 4 4 7 7 7`,
 			output: `0 1 2 1 2 3 3`,
 		},
 	}
